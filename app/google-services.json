@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "692938815752",
+    "project_id": "tripchoice-aff3b",
+    "storage_bucket": "tripchoice-aff3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:692938815752:android:474422729fa1b0dac294bd",
+        "android_client_info": {
+          "package_name": "com.example.tripchoice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "692938815752-7j2c450md9i07a4g887od4j1rml71r08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqH__62MZrkrfa-j1-ZZFAWnXbSHQscP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "692938815752-7j2c450md9i07a4g887od4j1rml71r08.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

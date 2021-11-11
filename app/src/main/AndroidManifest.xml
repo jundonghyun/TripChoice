@@ -9,10 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TripChoice">
-        <activity
-            android:name=".test22"
-            android:exported="false" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".CloudFireStoreExample">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
