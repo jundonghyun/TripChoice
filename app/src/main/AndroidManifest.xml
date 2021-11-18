@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SearchActivity"/>
+        <activity android:name=".JoinActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".NoticeActivity"/>
+        <activity android:name=".MapActivity"/>
+        <activity android:name=".MyidActivity"/>
+        <activity android:name=".RestaurantActivity"/>
+        <activity android:name=".ActivityActivity"/>
     </application>
 
 </manifest>
