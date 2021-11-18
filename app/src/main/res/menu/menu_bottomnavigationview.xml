@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/viewmap"
+        android:icon="@drawable/ic_baseline_map_24"
+        android:title="지도"/>
+
+    <item
+        android:id="@+id/viewlist"
+        android:icon="@drawable/ic_baseline_list_24"
+        android:title="추천관광지"/>
+
+</menu>
