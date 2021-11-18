@@ -57,7 +57,7 @@ public class CloudFireStoreExample extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                db.collection("users")
+                db.collection("data")
                         .add(user)
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override
@@ -80,7 +80,7 @@ public class CloudFireStoreExample extends AppCompatActivity {
     }
 
     private void getData(){
-        db.collection("users")
+        db.collection("data")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
