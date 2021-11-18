@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tripchoice">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -8,9 +9,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TripChoice">
-        <activity android:name=".CloudFireStoreExample"></activity>
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.TripChoice"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".DongHyun.RecommendAttractionActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".CloudFireStoreExample" />
+        <activity android:name=".DongHyun.AttractionMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
