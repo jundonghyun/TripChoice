@@ -27,42 +27,47 @@
                 android:textColor="#000000"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
             android:orientation="horizontal"
+            android:id="@+id/input_layout_id"
             >
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="65dp"
                 android:textColor="@color/black"
-                android:hint="Username"
+                android:background="@color/white"
+                android:hint="아이디"
                 android:id="@+id/login_id"/>
 
-        </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginLeft="65dp"
+            android:id="@+id/input_layout_password"
             android:orientation="vertical">
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/black"
-                android:hint="password"
+                android:inputType="textPassword"
+                android:hint="비밀번호"
                 android:id="@+id/login_passwd"/>
 
             <CheckBox
-                android:layout_marginLeft="60dp"
                 android:id="@+id/setid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="아이디저장" />
-        </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -76,19 +81,18 @@
                 android:layout_marginRight="20dp"
                 android:layout_gravity="center_horizontal"
                 android:text="로그인"
-                android:backgroundTint="#ffffff"
-                android:textColor="@color/black"
+                android:backgroundTint="@color/ButtonColor"
+                android:textColor="@color/white"
                 android:id="@+id/LoginBtn"/>
             <Button
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="회원가입"
-                android:backgroundTint="#ffffff"
-                android:textColor="@color/black"
+                android:backgroundTint="@color/ButtonColor"
+                android:textColor="@color/white"
                 android:id="@+id/RegisterBtn"/>
         </LinearLayout>
-
 
     </LinearLayout>
 

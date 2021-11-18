@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DongHyun.AttractionMainActivity"
-    android:background="#fafad2">
+    tools:context=".DongHyun.AttractionMainActivity">
 
 
     <LinearLayout
@@ -27,6 +26,7 @@
 
         <Button
             android:id="@+id/search_button"
+            android:backgroundTint="@color/ButtonColor"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="검색"

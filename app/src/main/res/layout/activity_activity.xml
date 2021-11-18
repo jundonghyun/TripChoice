@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#fafad2">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,9 +13,10 @@
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
+            android:textStyle="bold"
             android:text="지역 선택"
-            android:textColor="#000000"
-            android:backgroundTint="#ffffff"/>
+            android:textColor="@color/white"
+            android:backgroundTint="@color/ButtonColor"/>
     </LinearLayout>
 
     <LinearLayout
@@ -96,8 +96,9 @@
             android:layout_height="60dp"
             android:layout_marginTop="80dp"
             android:text="메인화면"
-            android:textColor="#000000"
-            android:backgroundTint="#ffffff"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/ButtonColor"
             android:layout_gravity="center"
             android:id="@+id/APrev"/>
     </LinearLayout>

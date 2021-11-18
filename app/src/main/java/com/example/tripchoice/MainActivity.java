@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle("여행을 초이스");
 
-        MainSearch = (EditText) findViewById(R.id.MainSearch);
+        //MainSearch = (EditText) findViewById(R.id.MainSearch);
         Notice = (Button) findViewById(R.id.Notice);
         Map = (Button) findViewById(R.id.Map);
         Schedule = (Button) findViewById(R.id.Schedule);

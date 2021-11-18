@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#fafad2">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
@@ -45,16 +44,16 @@
             android:layout_height="60dp"
             android:text="메인화면"
             android:layout_marginRight="10dp"
-            android:textColor="#000000"
-            android:backgroundTint="#ffffff"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/ButtonColor"
             android:id="@+id/NPrev"/>
         <Button
             android:layout_marginTop="10dp"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:text="글 작성"
-            android:textColor="#000000"
-            android:backgroundTint="#ffffff"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/ButtonColor"
             android:id="@+id/NWrite"/>
     </LinearLayout>
 

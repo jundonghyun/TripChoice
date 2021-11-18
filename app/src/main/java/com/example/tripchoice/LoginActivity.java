@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +19,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -25,7 +28,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class LoginActivity extends AppCompatActivity {
+    private TextInputLayout id_inputLayout, password_inputLayout;
     private EditText edit_id, edit_passwd;
     private Button button_login, button_register;
     private CheckBox setid;
@@ -40,8 +47,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        edit_id = findViewById(R.id.login_id);
-        edit_passwd = findViewById(R.id.login_passwd);
+        id_inputLayout = findViewById(R.id.input_layout_id);
+        password_inputLayout = findViewById(R.id.input_layout_password);
+        edit_id = id_inputLayout.getEditText();
+        edit_passwd = password_inputLayout.getEditText();
         button_login = findViewById(R.id.LoginBtn);
         button_register = findViewById(R.id.RegisterBtn);
         setid = findViewById(R.id.setid);
@@ -71,6 +80,55 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        edit_id.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String t = s.toString();
+                if(!android.util.Patterns.EMAIL_ADDRESS.matcher(t).matches()){
+                    id_inputLayout.setError("올바른 이메일 형식이 아닙니다");
+                }
+                else{
+                    id_inputLayout.setError(null);
+                }
+            }
+        });
+
+        edit_passwd.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String t = s.toString();
+                Pattern p = Pattern.compile("(^.*(?=.{6,100})(?=.*[0-9])(?=.*[a-zA-Z]).*$)");
+
+                Matcher m = p.matcher(t);
+                if (m.find() && !t.matches(".*[ㄱ-ㅎㅏ-ㅣ가-힣]+.*")){
+                    password_inputLayout.setError(null);
+                }else{
+                    password_inputLayout.setError("올바른 비밀번호 형식이 아닙니다");
+                }
+            }
+        });
+        password_inputLayout.setEndIconMode(TextInputLayout.END_ICON_PASSWORD_TOGGLE);
+
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,7 +148,6 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, JoinActivity.class));
             }
         });
-
     }
 
     private void Login (String email, String password) {
