@@ -1,15 +1,15 @@
 package com.example.tripchoice;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity  extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity {
 
     Button SearchBtn, JoinBtn, LoginBtn;
     EditText ID1, password1;
@@ -26,5 +26,28 @@ public class MainActivity  extends AppCompatActivity {
         ID1 = (EditText) findViewById(R.id.ID1);
         password1 = (EditText) findViewById(R.id.password1);
 
+        SearchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        JoinBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), JoinActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LoginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

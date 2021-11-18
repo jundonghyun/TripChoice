@@ -9,6 +9,9 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.tripchoice.DongHyun.AttractionMainActivity;
+import com.example.tripchoice.DongHyun.RecommendAttractionActivity;
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText MainSearch;
@@ -30,6 +33,14 @@ public class LoginActivity extends AppCompatActivity {
         Spot = (Button) findViewById(R.id.Spot);
         Account = (Button) findViewById(R.id.Account);
         Logout = (Button) findViewById(R.id.Logout);
+
+        Spot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AttractionMainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Notice.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -12,16 +12,15 @@
         android:theme="@style/Theme.TripChoice"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".DongHyun.RecommendAttractionActivity"></activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".CloudFireStoreExample" />
-        <activity android:name=".DongHyun.AttractionMainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CloudFireStoreExample"/>
+        <activity android:name=".DongHyun.RecommendAttractionActivity"/>
         <activity android:name=".SearchActivity"/>
         <activity android:name=".JoinActivity"/>
         <activity android:name=".LoginActivity"/>
