@@ -1,48 +1,87 @@
 package com.example.tripchoice;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.tripchoice.DongHyun.AttractionMainActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    Button SearchBtn, JoinBtn, LoginBtn;
-    EditText ID1, password1;
+    EditText MainSearch;
+    Button Notice, Map, Schedule, Course, Hotel, Restaurant, Activity, Spot, Account, Logout;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("여행을 초이스");
 
-        SearchBtn = (Button) findViewById(R.id.SearchBtn);
-        JoinBtn = (Button) findViewById(R.id.JoinBtn);
-        LoginBtn = (Button) findViewById(R.id.LoginBtn);
-        ID1 = (EditText) findViewById(R.id.ID1);
-        password1 = (EditText) findViewById(R.id.password1);
+        MainSearch = (EditText) findViewById(R.id.MainSearch);
+        Notice = (Button) findViewById(R.id.Notice);
+        Map = (Button) findViewById(R.id.Map);
+        Schedule = (Button) findViewById(R.id.Schedule);
+        Course = (Button) findViewById(R.id.Course);
+        Hotel = (Button) findViewById(R.id.Hotel);
+        Restaurant = (Button) findViewById(R.id.Restaurant);
+        Activity = (Button) findViewById(R.id.Activity);
+        Spot = (Button) findViewById(R.id.Spot);
+        Account = (Button) findViewById(R.id.Account);
+        Logout = (Button) findViewById(R.id.Logout);
 
-        SearchBtn.setOnClickListener(new View.OnClickListener() {
+        Spot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+                Intent intent = new Intent(getApplicationContext(), AttractionMainActivity.class);
                 startActivity(intent);
             }
         });
 
-        JoinBtn.setOnClickListener(new View.OnClickListener() {
+        Notice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), JoinActivity.class);
+                Intent intent = new Intent(getApplicationContext(), NoticeActivity.class);
                 startActivity(intent);
             }
         });
 
-        LoginBtn.setOnClickListener(new View.OnClickListener() {
+        Map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Restaurant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RestaurantActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Activity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ActivityActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MyidActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
