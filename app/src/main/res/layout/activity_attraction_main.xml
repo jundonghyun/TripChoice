@@ -6,32 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".DongHyun.AttractionMainActivity">
 
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
-        <EditText
-            android:id="@+id/input_position"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="숙박시설 이름이나 위치를 입력하세요"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:layout_weight="1"
-            tools:layout_editor_absoluteY="6dp" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/input_position"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="숙박시설 이름이나 위치를 입력하세요"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                tools:layout_editor_absoluteY="6dp" />
 
-        <Button
-            android:id="@+id/search_button"
-            android:backgroundTint="@color/ButtonColor"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="검색"
-            android:textSize="15sp"
-            tools:ignore="MissingConstraints" />
+            <Button
+                android:id="@+id/search_button"
+                android:backgroundTint="@color/ButtonColor"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="검색"
+                android:textSize="15sp"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imT"
+                android:src="@drawable/trav"/>
+        </LinearLayout>
 
     </LinearLayout>
 
