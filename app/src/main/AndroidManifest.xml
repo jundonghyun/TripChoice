@@ -24,7 +24,8 @@
         <activity android:name=".ActivityActivity" />
         <activity android:name=".DongHyun.AttractionMainActivity" />
         <activity android:name=".ScheduleActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
