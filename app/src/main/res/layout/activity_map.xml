@@ -8,22 +8,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:text="지역 선택"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/ButtonColor"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="지도 보기"
+            android:textSize="30dp"/>
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="10"
-        android:orientation="vertical">
-    </LinearLayout>
+        android:id="@+id/base">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/im"
+            android:src="@drawable/hello"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/im1"
+            android:src="@drawable/gyeonggi"
+            android:visibility="invisible"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/im2"
+            android:src="@drawable/daegu"
+            android:visibility="invisible"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/im3"
+            android:src="@drawable/busan"
+            android:visibility="invisible"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/im4"
+            android:src="@drawable/jeju"
+            android:visibility="invisible"/>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
