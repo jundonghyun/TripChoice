@@ -33,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
         Account = (Button) findViewById(R.id.Account);
         Logout = (Button) findViewById(R.id.Logout);
 
+        Schedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ScheduleActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Spot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
