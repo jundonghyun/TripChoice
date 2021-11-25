@@ -3,8 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TripChoice/app/src/main/res/drawable/bottomnav_mapicon.xml" value="0.14537037037037037" />
+        <entry key="..\:/TripChoice/app/src/main/res/drawable/bottomupnav_hotelicon.xml" value="0.14537037037037037" />
+        <entry key="..\:/TripChoice/app/src/main/res/drawable/bottomupnav_resturanticon.xml" value="0.14537037037037037" />
+        <entry key="..\:/TripChoice/app/src/main/res/drawable/button_background.xml" value="0.14537037037037037" />
+        <entry key="..\:/TripChoice/app/src/main/res/layout/activity_attraction_main.xml" value="0.13247213779128672" />
+        <entry key="..\:/TripChoice/app/src/main/res/layout/activity_join.xml" value="0.13247213779128672" />
+        <entry key="..\:/TripChoice/app/src/main/res/layout/activity_login.xml" value="0.13247213779128672" />
         <entry key="..\:/TripChoice/app/src/main/res/layout/activity_main.xml" value="0.13221884498480244" />
+        <entry key="..\:/TripChoice/app/src/main/res/layout/activity_schedule.xml" value="0.13247213779128672" />
+        <entry key="..\:/TripChoice/app/src/main/res/layout/activity_searchid.xml" value="0.13247213779128672" />
+        <entry key="..\:/TripChoice/app/src/main/res/layout/activity_splash.xml" value="0.13247213779128672" />
         <entry key="..\:/TripChoice/app/src/main/res/layout/mainactiviy.xml" value="0.13272543059777103" />
+        <entry key="..\:/TripChoice/app/src/main/res/layout/recommend_attraction_item.xml" value="0.13247213779128672" />
       </map>
     </option>
   </component>
