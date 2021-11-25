@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         Map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+                Intent intent = new Intent(getApplicationContext(), Map2Activity.class);
                 startActivity(intent);
             }
         });

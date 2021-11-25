@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TripChoice"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Map2Activity"
+            android:exported="false" />
         <activity android:name=".DongHyun.RecommendAttractionActivity" />
         <activity android:name=".CloudFireStoreExample" />
         <activity android:name=".SearchActivity" />
@@ -32,6 +35,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBVdyJI_O-SMQwTi7cmj5wjjXRXaxf2LqM" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
     </application>
 
 </manifest>
