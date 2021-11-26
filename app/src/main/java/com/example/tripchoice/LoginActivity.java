@@ -160,7 +160,9 @@ public class LoginActivity extends AppCompatActivity {
                         Log.d("tag", "SignWithEmail:onComplete" + task.isSuccessful());
                         if(task.isSuccessful()){
                             finish();
-                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            intent.putExtra("id", id);
+                            startActivity(intent);
                             Toast.makeText(LoginActivity.this, "로그인 되었습니다", Toast.LENGTH_SHORT).show();
                         }
                         else{

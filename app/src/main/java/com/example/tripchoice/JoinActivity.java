@@ -96,9 +96,8 @@ public class JoinActivity extends AppCompatActivity {
 
         Map<String, String> User = new HashMap<>();
 
-        User.put("Email", email);
-        User.put("Password", password);
-        User.put("이름", name);
+        User.put("email", email);
+        User.put("name", name);
 
 
         DocumentReference newUserRef = db

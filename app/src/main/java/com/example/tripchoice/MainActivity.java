@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
         Account = (Button) findViewById(R.id.Account);
         Logout = (Button) findViewById(R.id.Logout);
 
+        Intent intent = getIntent();
+        String id = intent.getStringExtra("id");
+
         Schedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MyidActivity.class);
+                intent.putExtra("id", id);
                 startActivity(intent);
             }
         });
@@ -100,7 +104,8 @@ public class MainActivity extends AppCompatActivity {
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), UserAddAttraction.class);
+                finish();
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
             }
         });
