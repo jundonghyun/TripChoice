@@ -12,23 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TripChoice"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".Map2Activity"
-            android:exported="false" />
+
         <activity android:name=".DongHyun.RecommendAttractionActivity" />
-        <activity android:name=".CloudFireStoreExample" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".JoinActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".ScheduleActivity" />
         <activity android:name=".NoticeActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".MyidActivity" />
         <activity android:name=".RestaurantActivity" />
         <activity android:name=".ActivityActivity" />
         <activity android:name=".DongHyun.AttractionMainActivity" />
-        <activity android:name=".ScheduleActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".SplashActivity"/>
+        <activity android:name=".DongHyun.UserAddAttraction"/>
+        <activity android:name=".Map2Activity"/>
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

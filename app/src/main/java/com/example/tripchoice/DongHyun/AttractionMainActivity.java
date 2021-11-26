@@ -1,17 +1,21 @@
 package com.example.tripchoice.DongHyun;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -24,6 +28,8 @@ import com.example.tripchoice.R;
 import com.skt.Tmap.TMapData;
 import com.skt.Tmap.TMapTapi;
 import com.skt.Tmap.poi_item.TMapPOIItem;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;
@@ -88,6 +94,15 @@ public class AttractionMainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_attractionmainactivity, menu);
+
+        return true;
+    }
+
+
     protected InputFilter filterKoEnNum = new InputFilter() {
         @Override
         public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
@@ -123,7 +138,10 @@ public class AttractionMainActivity extends AppCompatActivity {
         switch(item.getItemId()){
             case android.R.id.home:
                 finish();
-                return true;
+                break;
+
+            case R.id.addattraction:
+                startActivity(new Intent(getApplicationContext(), UserAddAttraction.class));
         }
         return super.onOptionsItemSelected(item);
     }

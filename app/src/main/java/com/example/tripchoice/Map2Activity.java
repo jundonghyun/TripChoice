@@ -65,7 +65,7 @@ public class Map2Activity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-//        CollectionReference cref = db.collection("Daegu"); //add doc
+//        CollectionReference cref = db.collection("대구"); //add doc
 //        Map<String, Object> data0 = new HashMap<>();
 //        data0.put("category", "tourist");
 //        data0.put("latitude", 35.84);
@@ -94,7 +94,7 @@ public class Map2Activity extends FragmentActivity implements OnMapReadyCallback
 //        data3.put("name", "대구그랜드호텔");
 //        cref.document().set(data3);
 
-        db.collection("Daegu")
+        db.collection("대구")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
