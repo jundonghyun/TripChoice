@@ -44,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
 
+        Hotel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HotelActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Schedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

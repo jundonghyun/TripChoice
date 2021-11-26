@@ -27,6 +27,7 @@
         <activity android:name=".SplashActivity"/>
         <activity android:name=".DongHyun.UserAddAttraction"/>
         <activity android:name=".Map2Activity"/>
+        <activity android:name=".HotelActivity"/>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
