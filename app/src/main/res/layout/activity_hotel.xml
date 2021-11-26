@@ -7,112 +7,101 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:text="숙박정보"
+        android:textStyle="bold"
         android:textSize="30dp"
         android:gravity="center"/>
 
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="주소 : 거제시 거제중앙로 1898-5 (고현동 33-30)"
-        android:textSize="15dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="거제관광호텔"
-        android:textSize="15dp"/>
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:layout_width="145dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="서울"
+            android:textSize="20dp"
+            android:backgroundTint="#ffffff"
+            android:textColor="#000000"
+            android:id="@+id/Hs"/>
+        <Button
+            android:layout_width="145dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:text="경기"
+            android:textSize="20dp"
+            android:backgroundTint="#ffffff"
+            android:textColor="#000000"
+            android:id="@+id/Hg"/>
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="주소 : 거제시 서간도길 16 (옥포동 330-2)"
-        android:textSize="15dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="(주)웰리브 애드미럴호텔"
-        android:textSize="15dp"/>
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:layout_width="145dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="대구"
+            android:textSize="20dp"
+            android:backgroundTint="#ffffff"
+            android:textColor="#000000"
+            android:id="@+id/Hd"/>
+        <Button
+            android:layout_width="145dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:text="부산"
+            android:textSize="20dp"
+            android:backgroundTint="#ffffff"
+            android:textColor="#000000"
+            android:id="@+id/Hb"/>
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="주소 : 거제시 남부면 거제남서로 1027 (저구리 312-2)"
-        android:textSize="15dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="해오름민박"
-        android:textSize="15dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="주소 : 거제시 남부면 대포길 69-1 (저구리 642-17)"
-        android:textSize="15dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="콘도형민박"
-        android:textSize="15dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="주소 : 거제시 남부면 거제남서로 737 (저구리 737-70)"
-        android:textSize="15dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="무지개펜션"
-        android:textSize="15dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="주소 : 남부면 거제남서로 292 (다포리 10-11)"
-        android:textSize="15dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="정원민박"
-        android:textSize="15dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="주소 : 거제시 남부면 여차길 12-2 (다포리 53-2)"
-        android:textSize="15dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="천년의미소"
-        android:textSize="15dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="주소 : 거제시 남부면 해금강3길 9 (남부면 갈곶리 74)"
-        android:textSize="15dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="양지펜션"
-        android:textSize="15dp"/>
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:layout_width="145dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="제주"
+            android:textSize="20dp"
+            android:backgroundTint="#ffffff"
+            android:textColor="#000000"
+            android:id="@+id/Hj"/>
+        <Button
+            android:layout_width="145dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:text="충청/전라"
+            android:textSize="20dp"
+            android:backgroundTint="#ffffff"
+            android:textColor="#000000"
+            android:id="@+id/Hc"/>
+    </LinearLayout>
 
     <Button
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:layout_marginTop="70dp"
         android:layout_gravity="center"
+        android:backgroundTint="#ffffff"
         android:text="메인화면"
+        android:textColor="#000000"
         android:id="@+id/HBtn"/>
 
 </LinearLayout>

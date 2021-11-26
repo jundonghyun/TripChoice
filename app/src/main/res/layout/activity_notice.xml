@@ -15,7 +15,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:layout_weight="5"
         android:orientation="vertical"
         android:layout_marginTop="20dp">
@@ -26,7 +26,7 @@
             android:background="#ffffc2">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="wrap_content"
                 android:text="여행을 초이스 입니다!"
                 android:textSize="30dp"
                 android:gravity="center"
@@ -41,7 +41,13 @@
             android:textColor="@color/white"
             android:backgroundTint="@color/ButtonColor"
             android:id="@+id/NWrite1"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,6 +61,15 @@
                 android:gravity="center"
                 android:id="@+id/ntv2"/>
         </ScrollView>
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:text="글 작성"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/ButtonColor"
+            android:id="@+id/NWrite2"/>
     </LinearLayout>
 
     <LinearLayout
@@ -64,18 +79,9 @@
         android:orientation="vertical"
         android:layout_gravity="center_horizontal">
         <Button
-            android:layout_marginTop="10dp"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:text="글 작성"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/ButtonColor"
-            android:id="@+id/NWrite2"/>
-        <Button
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:text="메인화면"
-            android:layout_marginRight="10dp"
             android:textColor="@color/white"
             android:backgroundTint="@color/ButtonColor"
             android:id="@+id/NPrev"/>
