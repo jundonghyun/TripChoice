@@ -8,9 +8,11 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="56dp"
-        android:layout_height="20dp"
+        android:layout_width="78dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
         android:text="지역선택"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toStartOf="@+id/SelectArea_spinner"
         app:layout_constraintHorizontal_bias="0.708"
@@ -20,15 +22,17 @@
 
     <TextView
         android:id="@+id/selectgu"
-        android:layout_width="67dp"
-        android:layout_height="20dp"
+        android:layout_width="96dp"
+        android:layout_height="29dp"
         android:layout_marginTop="10dp"
         android:text="구군시선택"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/AdministrativeDivision_spinner"
         app:layout_constraintEnd_toStartOf="@+id/AdministrativeDivision_spinner"
-        app:layout_constraintHorizontal_bias="0.67"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SelectArea_spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/SelectArea_spinner"
+        app:layout_constraintVertical_bias="0.666" />
 
     <Spinner
         android:id="@+id/SelectArea_spinner"
@@ -72,7 +76,7 @@
     <EditText
         android:id="@+id/insertAttractionContent_edittext"
         android:layout_width="390dp"
-        android:layout_height="272dp"
+        android:layout_height="268dp"
         android:layout_marginTop="48dp"
         android:background="@drawable/memo_border"
         android:gravity="top"
@@ -124,12 +128,11 @@
         android:layout_marginTop="60dp"
         android:layout_marginBottom="11dp"
         android:text="제목"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/insertAttractionTitle_edittext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
@@ -137,39 +140,39 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="28dp"
+        android:layout_marginBottom="52dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toEndOf="@+id/firstImage_imageview"
-        app:layout_constraintTop_toBottomOf="@+id/insertAttractionContent_edittext"
-        app:layout_constraintVertical_bias="0.37" />
+        app:layout_constraintTop_toTopOf="@+id/firstImage_imageview"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/ThirdImage_imageview"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="30dp"
+        android:layout_marginBottom="52dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toEndOf="@+id/SecondImage_imageview"
-        app:layout_constraintTop_toBottomOf="@+id/SelectImage_button"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintTop_toTopOf="@+id/SecondImage_imageview"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/firstImage_imageview"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="52dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/insertAttractionContent_edittext"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/insertAttractionContent_edittext" />
 
     <Button
         android:id="@+id/InsertButton_button"

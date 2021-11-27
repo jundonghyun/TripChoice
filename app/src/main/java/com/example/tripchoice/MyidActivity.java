@@ -45,14 +45,14 @@ public class MyidActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
-        List<Map<String, Object>> Dlist = new ArrayList<Map<String,Object>>();
+        List<Map<String, Object>> Dlist = new ArrayList<Map<String, Object>>();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference documentReference = db.collection("User").document(id);
 
         documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
                     DocumentSnapshot documentSnapshot = task.getResult();
                     id_textview.setText("ID: " + id);
                     name_textview.setText("이름: " + documentSnapshot.getString("name"));
@@ -62,7 +62,6 @@ public class MyidActivity extends AppCompatActivity {
         });
 
 
-
         IdPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,17 +69,5 @@ public class MyidActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-
-    public class UserInfo{
-        public String name ="";
-        public String email ="";
-
-        public UserInfo(String name, String email) {
-            this.name = name;
-            this.email = email;
-        }
-
-        public UserInfo(){}
     }
 }

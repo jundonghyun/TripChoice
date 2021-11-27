@@ -25,7 +25,8 @@
         <activity android:name=".DongHyun.AttractionMainActivity" />
         <activity android:name=".MainActivity"/>
         <activity android:name=".SplashActivity"/>
-        <activity android:name=".DongHyun.UserAddAttraction"/>
+        <activity android:name=".DongHyun.UserAddAttraction"
+            android:windowSoftInputMode="adjustNothing"/>
         <activity android:name=".Map2Activity"/>
         <activity android:name=".HotelActivity"/>
         <activity android:name=".LoginActivity">
