@@ -1,82 +1,66 @@
 package com.example.tripchoice;
 
-import android.content.DialogInterface;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
+
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.PopupMenu;
-import android.widget.RelativeLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+//import com.google.type.LatLng;
 
-public class MapActivity extends AppCompatActivity {
+import org.jetbrains.annotations.NotNull;
 
-    ImageView im1, im2, im3, im4, im;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class MapActivity extends FragmentActivity implements OnMapReadyCallback {
+
+    private GoogleMap mMap;
     Button MPrev;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private String SelectName = null;
+    List<Map<String, Object>> Dlist = new ArrayList<Map<String,Object>>();
+
+    LatLng Seoul = new LatLng(37.54, 126.95);
+    LatLng Daegu = new LatLng(35.82, 128.58);
+    LatLng Busan = new LatLng(35.19, 129.05);
+    LatLng Inchoen = new LatLng(37.46, 126.57);
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        menu.add(0, 1, 0, "경기");
-        menu.add(0, 2, 0, "대구");
-        menu.add(0, 3, 0, "부산");
-        menu.add(0, 4, 0, "제주");
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case 1:
-                im1.setVisibility(View.VISIBLE);
-                im2.setVisibility(View.INVISIBLE);
-                im3.setVisibility(View.INVISIBLE);
-                im4.setVisibility(View.INVISIBLE);
-                im.setVisibility(View.INVISIBLE);
-                return true;
-            case 2:
-                im1.setVisibility(View.INVISIBLE);
-                im2.setVisibility(View.VISIBLE);
-                im3.setVisibility(View.INVISIBLE);
-                im4.setVisibility(View.INVISIBLE);
-                im.setVisibility(View.INVISIBLE);
-                return true;
-            case 3:
-                im1.setVisibility(View.INVISIBLE);
-                im2.setVisibility(View.INVISIBLE);
-                im3.setVisibility(View.VISIBLE);
-                im4.setVisibility(View.INVISIBLE);
-                im.setVisibility(View.INVISIBLE);
-                return true;
-            case 4:
-                im1.setVisibility(View.INVISIBLE);
-                im2.setVisibility(View.INVISIBLE);
-                im3.setVisibility(View.INVISIBLE);
-                im4.setVisibility(View.VISIBLE);
-                im.setVisibility(View.INVISIBLE);
-                return true;
-        }
-        return false;
-    }
-
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
 
-        im = (ImageView) findViewById(R.id.im);
-        im1 = (ImageView) findViewById(R.id.im1);
-        im2 = (ImageView) findViewById(R.id.im2);
-        im3 = (ImageView) findViewById(R.id.im3);
-        im4 = (ImageView) findViewById(R.id.im4);
+
         MPrev = (Button) findViewById(R.id.MPrev);
-
         MPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,5 +68,132 @@ public class MapActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ArrayAdapter<CharSequence> myarray;
+        myarray = ArrayAdapter.createFromResource(this,R.array.region_array, android.R.layout.simple_spinner_dropdown_item);
+        Spinner spinner = (Spinner)findViewById(R.id.spinner);
+
+        spinner.setAdapter(myarray);
+
+
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                SelectName = (String)spinner.getSelectedItem();
+                String Path = (String)spinner.getSelectedItem();
+                Dlist.clear();
+                mMap.clear();
+
+                db.collection(Path)
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                if (task.isSuccessful()) {
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                        Log.d("tag", document.getId() + " => " + document.getData());
+                                        Dlist.add(document.getData());
+                                    }
+                                } else {
+                                    Log.d("tag", "Error getting documents: ", task.getException());
+                                }
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d("err", "Error getting documents: ", e);
+                    }
+                }).addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        for(int i = 0;i<Dlist.size();i++){
+                            MarkerOptions marker1 = new MarkerOptions();
+                            marker1.position(new LatLng((Double)(Dlist.get(i).get("latitude")),(Double)(Dlist.get(i).get("longitude"))));
+                            marker1.title((String)(Dlist.get(i).get("name")));
+                            mMap.addMarker(marker1);
+                        }
+                    }
+                });
+
+                if (position == 0){
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(Seoul));
+                    mMap.animateCamera((CameraUpdateFactory.zoomTo(11)));
+                }
+                if (position == 1){
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(Daegu));
+                    mMap.animateCamera((CameraUpdateFactory.zoomTo(11)));
+                }
+                if (position == 2){
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(Busan));
+                    mMap.animateCamera((CameraUpdateFactory.zoomTo(11)));
+                }
+                if (position == 3){
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(Inchoen));
+                    mMap.animateCamera((CameraUpdateFactory.zoomTo(10)));
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+    }
+
+
+    @Override
+    public void onMapReady(final GoogleMap googleMap) {
+
+        mMap = googleMap;
+
+
+
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+
+            public boolean onMarkerClick(Marker marker) {
+                String name = marker.getTitle();
+                FirebaseFirestore db = FirebaseFirestore.getInstance();
+                DocumentReference documentReference = db.collection(SelectName).document(name);
+                documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+                        if(task.isSuccessful()){
+                            DocumentSnapshot snapshot = task.getResult();
+                            String t = snapshot.getString("name");
+                            String c = snapshot.getString("content");
+                            showDialog(SelectName, t, c);
+                        }
+                    }
+                });
+                return false;
+            }
+        });
+    }
+
+    public void showDialog(String name, String t, String c){
+        View view = getLayoutInflater().inflate(R.layout.detaileddialog, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+        builder.setView(view);
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+        TextView pos = view.findViewById(R.id.pos_textview);
+        TextView title = view.findViewById(R.id.title_textview);
+        TextView content = view.findViewById(R.id.detail_textview);
+        Button ok = view.findViewById(R.id.detailedCustormButton);
+
+        pos.setText("대한민국 > " + name);
+        title.setText(t);
+        content.setText(c);
+
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+
+
     }
 }

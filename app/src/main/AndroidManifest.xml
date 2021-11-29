@@ -17,7 +17,6 @@
         <activity android:name=".JoinActivity" />
         <activity android:name=".ScheduleActivity" />
         <activity android:name=".NoticeActivity" />
-        <activity android:name=".MapActivity" />
         <activity android:name=".MyidActivity" />
         <activity android:name=".RestaurantActivity" />
         <activity android:name=".ActivityActivity" />
@@ -28,7 +27,7 @@
         <activity
             android:name=".DongHyun.UserAddAttraction"
             android:windowSoftInputMode="adjustNothing" />
-        <activity android:name=".Map2Activity" />
+        <activity android:name=".MapActivity" />
         <activity android:name=".HotelActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>

@@ -35,8 +35,7 @@ public class JoinActivity extends AppCompatActivity {
 
     private EditText mEmail, mPassword, mName, conrifmPassword;
     private TextInputLayout passwordcheckLayout;
-    private Button mRegisterBtn, password_check, cancelbtn;
-    private ProgressBar mProgressBar;
+    private Button mRegisterBtn, cancelbtn;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private FirebaseAuth mAuth;
