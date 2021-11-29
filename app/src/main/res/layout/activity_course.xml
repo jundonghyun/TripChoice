@@ -8,8 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="숙박정보"
-        android:textStyle="bold"
+        android:text="여행코스"
         android:textSize="30dp"
         android:gravity="center"/>
 
@@ -21,7 +20,7 @@
         android:layout_gravity="center">
 
         <Button
-            android:id="@+id/Hs"
+            android:id="@+id/a"
             android:layout_width="145dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
@@ -32,14 +31,14 @@
             android:textSize="20dp" />
 
         <Button
+            android:id="@+id/b"
             android:layout_width="145dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:text="경기"
             android:textSize="20dp"
             android:backgroundTint="#ffffff"
-            android:textColor="#000000"
-            android:id="@+id/Hg"/>
+            android:textColor="#000000" />
     </LinearLayout>
 
     <LinearLayout
@@ -49,6 +48,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center">
         <Button
+            android:id="@+id/c"
             android:layout_width="145dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
@@ -56,17 +56,16 @@
             android:text="대구"
             android:textSize="20dp"
             android:backgroundTint="#ffffff"
-            android:textColor="#000000"
-            android:id="@+id/Hd"/>
+            android:textColor="#000000" />
         <Button
+            android:id="@+id/d"
             android:layout_width="145dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:text="부산"
             android:textSize="20dp"
             android:backgroundTint="#ffffff"
-            android:textColor="#000000"
-            android:id="@+id/Hb"/>
+            android:textColor="#000000" />
     </LinearLayout>
 
     <LinearLayout
@@ -76,6 +75,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center">
         <Button
+            android:id="@+id/e"
             android:layout_width="145dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
@@ -83,27 +83,26 @@
             android:text="제주"
             android:textSize="20dp"
             android:backgroundTint="#ffffff"
-            android:textColor="#000000"
-            android:id="@+id/Hj"/>
+            android:textColor="#000000" />
         <Button
+            android:id="@+id/f"
             android:layout_width="145dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:text="충청/전라"
             android:textSize="20dp"
             android:backgroundTint="#ffffff"
-            android:textColor="#000000"
-            android:id="@+id/Hc"/>
+            android:textColor="#000000" />
     </LinearLayout>
 
     <Button
+        android:id="@+id/back"
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:layout_marginTop="70dp"
         android:layout_gravity="center"
         android:backgroundTint="#ffffff"
         android:text="메인화면"
-        android:textColor="#000000"
-        android:id="@+id/HBtn"/>
+        android:textColor="#000000" />
 
 </LinearLayout>

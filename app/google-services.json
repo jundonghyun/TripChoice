@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "692938815752",
+    "firebase_url": "https://tripchoice-aff3b-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "tripchoice-aff3b",
     "storage_bucket": "tripchoice-aff3b.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "692938815752-fv1ft3v59mjk34qdb6fg9jb72eqk262l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tripchoice",
+            "certificate_hash": "f77a0bdf03c630529a871a26b8e5766498720b00"
+          }
+        },
         {
           "client_id": "692938815752-7j2c450md9i07a4g887od4j1rml71r08.apps.googleusercontent.com",
           "client_type": 3

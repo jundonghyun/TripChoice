@@ -3,20 +3,53 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/TripChoice/app/src/main/res/drawable/bottomnav_mapicon.xml" value="0.14537037037037037" />
-        <entry key="..\:/TripChoice/app/src/main/res/drawable/bottomupnav_hotelicon.xml" value="0.14537037037037037" />
-        <entry key="..\:/TripChoice/app/src/main/res/drawable/bottomupnav_resturanticon.xml" value="0.14537037037037037" />
-        <entry key="..\:/TripChoice/app/src/main/res/drawable/button_background.xml" value="0.14537037037037037" />
-        <entry key="..\:/TripChoice/app/src/main/res/layout/activity_attraction_main.xml" value="0.13247213779128672" />
-        <entry key="..\:/TripChoice/app/src/main/res/layout/activity_join.xml" value="0.13247213779128672" />
-        <entry key="..\:/TripChoice/app/src/main/res/layout/activity_login.xml" value="0.13247213779128672" />
         <entry key="..\:/TripChoice/app/src/main/res/layout/activity_main.xml" value="0.13221884498480244" />
-        <entry key="..\:/TripChoice/app/src/main/res/layout/activity_map.xml" value="0.13247213779128672" />
-        <entry key="..\:/TripChoice/app/src/main/res/layout/activity_schedule.xml" value="0.13247213779128672" />
-        <entry key="..\:/TripChoice/app/src/main/res/layout/activity_searchid.xml" value="0.13247213779128672" />
-        <entry key="..\:/TripChoice/app/src/main/res/layout/activity_splash.xml" value="0.13247213779128672" />
         <entry key="..\:/TripChoice/app/src/main/res/layout/mainactiviy.xml" value="0.13272543059777103" />
-        <entry key="..\:/TripChoice/app/src/main/res/layout/recommend_attraction_item.xml" value="0.13247213779128672" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/drawable/bottomupnav_activityicon.xml" value="0.2045" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/drawable/bottomupnav_attractionicon.xml" value="0.2045" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/drawable/bottomupnav_hotelicon.xml" value="0.2045" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/drawable/button_click_after.xml" value="0.2045" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/drawable/button_click_before.xml" value="0.2045" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_activity.xml" value="0.245018115942029" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_attraction_main.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_course.xml" value="0.1" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_hotel.xml" value="0.1" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_join.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_login.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_main.xml" value="0.11865942028985507" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_map.xml" value="0.11865942028985507" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_map2.xml" value="0.11865942028985507" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_myid.xml" value="0.11865942028985507" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_notice.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_recommend_attraction.xml" value="0.1" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_restaurant.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_schedule.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_searchid.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_splash.xml" value="0.11865942028985507" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/activity_user_add_attraction.xml" value="0.11865942028985507" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/attraction_list_item.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/busandialog.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/course_busan.xml" value="0.1" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/course_chungcheong.xml" value="0.1" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/course_chungchung.xml" value="0.1" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/course_daegu.xml" value="0.1" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/course_gyounggi.xml" value="0.1" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/course_jeju.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/course_seoul.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/daegudialog.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/detaileddialog.xml" value="0.23369565217391305" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/fragment_show_hotel_on_map.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/fragment_show_recommend_attraction_fragement.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/gyeonggidialog.xml" value="0.245018115942029" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/jejudialog.xml" value="0.245018115942029" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/noticedialog.xml" value="0.11865942028985507" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/noticetoast.xml" value="0.11865942028985507" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/recommend_attraction_item.xml" value="0.11865942028985507" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/seouldialog.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/layout/spinner_item.xml" value="0.11865942028985507" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/menu/menu_attractionmainactivity.xml" value="0.25" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/menu/menu_bottomnavigationview.xml" value="0.25" />
+        <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2045" />
       </map>
     </option>
   </component>

@@ -24,6 +24,7 @@
         <activity android:name=".DongHyun.AttractionMainActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SplashActivity" />
+        <activity android:name=".CourseActivity" />
         <activity
             android:name=".DongHyun.UserAddAttraction"
             android:windowSoftInputMode="adjustNothing" />
