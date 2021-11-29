@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TripChoice"
         android:usesCleartextTraffic="true">
-
         <activity android:name=".DongHyun.RecommendAttractionActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".JoinActivity" />
@@ -23,12 +22,13 @@
         <activity android:name=".RestaurantActivity" />
         <activity android:name=".ActivityActivity" />
         <activity android:name=".DongHyun.AttractionMainActivity" />
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".SplashActivity"/>
-        <activity android:name=".DongHyun.UserAddAttraction"
-            android:windowSoftInputMode="adjustNothing"/>
-        <activity android:name=".Map2Activity"/>
-        <activity android:name=".HotelActivity"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashActivity" />
+        <activity
+            android:name=".DongHyun.UserAddAttraction"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".Map2Activity" />
+        <activity android:name=".HotelActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
