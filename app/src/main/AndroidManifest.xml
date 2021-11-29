@@ -13,7 +13,6 @@
         android:theme="@style/Theme.TripChoice"
         android:usesCleartextTraffic="true">
         <activity android:name=".DongHyun.RecommendAttractionActivity" />
-        <activity android:name=".SearchActivity" />
         <activity android:name=".JoinActivity" />
         <activity android:name=".ScheduleActivity" />
         <activity android:name=".NoticeActivity" />

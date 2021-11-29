@@ -43,6 +43,7 @@ public class ScheduleActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Calendar cal = Calendar.getInstance();
         int cYear = cal.get(Calendar.YEAR);
         int cMonth = cal.get(Calendar.MONTH);
@@ -77,7 +78,7 @@ public class ScheduleActivity extends AppCompatActivity {
         String diaryStr = null;
         FileInputStream inFs;
         try {
-            inFs = openFileInput(fName);
+            inFs = openFileInput(fileName);
             byte[] txt = new byte[500];
             inFs.read(txt);
             inFs.close();
@@ -87,6 +88,6 @@ public class ScheduleActivity extends AppCompatActivity {
             Sed.setHint("일정을 입력하세요");
             WriteBtn.setText("새로 저장");
         }
-        return null;
+        return diaryStr;
     }
 }
