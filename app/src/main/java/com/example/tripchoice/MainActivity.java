@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         Restaurant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RestaurantActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ResRegionSelect.class);
                 startActivity(intent);
             }
         });
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         Activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ActivityActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ActRegionSelect.class);
                 startActivity(intent);
             }
         });
