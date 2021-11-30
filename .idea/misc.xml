@@ -4,6 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_main.xml" value="0.10833333333333334" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_myid.xml" value="0.1527777777777778" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_notice.xml" value="0.14722222222222223" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_schedule.xml" value="0.15" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_splash.xml" value="0.14722222222222223" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/noticetoast.xml" value="0.14722222222222223" />
         <entry key="..\:/TripChoice/app/src/main/res/layout/activity_main.xml" value="0.13221884498480244" />
         <entry key="..\:/TripChoice/app/src/main/res/layout/mainactiviy.xml" value="0.13272543059777103" />
         <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/drawable/bottomupnav_activityicon.xml" value="0.2045" />
