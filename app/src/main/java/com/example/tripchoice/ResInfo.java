@@ -10,6 +10,7 @@ public class ResInfo {
     private String rate;
     private String menu;
     private Bitmap bitmap;
+    private String desc;
 
     public ResInfo(){
 
@@ -23,6 +24,14 @@ public class ResInfo {
         this.rate = rate;
         this.menu = menu;
         this.bitmap = bitmap;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
     public Bitmap getBitmap() { return bitmap; }

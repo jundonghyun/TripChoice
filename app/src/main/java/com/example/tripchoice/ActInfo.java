@@ -9,6 +9,7 @@ public class ActInfo {
     String call;
     String rate;
     String region;
+    String Desc;
     Bitmap bitmap;
 
     public ActInfo() {
@@ -21,6 +22,14 @@ public class ActInfo {
         this.rate = rate;
         this.region = region;
         this.bitmap = bitmap;
+    }
+
+    public String getDesc() {
+        return Desc;
+    }
+
+    public void setDesc(String desc) {
+        Desc = desc;
     }
 
     public Bitmap getBitmap() { return bitmap; }
