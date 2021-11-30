@@ -34,7 +34,7 @@
         </LinearLayout>
         <Button
             android:layout_width="300dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_gravity="center"
             android:text="공지사항"
             android:textSize="20dp"
