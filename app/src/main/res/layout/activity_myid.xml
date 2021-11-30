@@ -7,63 +7,90 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
             android:text="내 계정"
-            android:textSize="40dp"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="40dp"
-            android:textColor="#000000"/>
+            android:textStyle="bold"
+            android:textSize="30dp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/admin2"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:layout_marginTop="21dp"
+            android:text=" 계정 정보"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:textColor="#ffffff"
+            android:background="#999999"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#ffffc2">
         <TextView
             android:id="@+id/id"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="ID"
-            android:textSize="25dp"/>
+            android:layout_height="45dp"
+            android:layout_marginBottom="20dp"
+            android:text="ID "
+            android:textSize="25dp"
+            android:background="#ffffc2"/>
         <TextView
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_marginTop="30dp"
-            android:text="이름"
-            android:textSize="25dp"/>
-
+            android:layout_marginBottom="20dp"
+            android:text="이름 "
+            android:textSize="25dp"
+            android:background="#ffffc2"/>
         <TextView
             android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_marginTop="30dp"
-            android:text="이메일 주소"
-            android:textSize="25dp"/>
-        <Button
-            android:layout_width="380dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="80dp"
-            android:layout_gravity="center"
-            android:text="내가 쓴 댓글, 평점 보기"
-            android:textSize="30dp"
-            android:textColor="#000000"
-            android:backgroundTint="#ffffff"
-            android:id="@+id/IdBtn"/>
+            android:text="이메일 주소 "
+            android:textSize="25dp"
+            android:background="#ffffc2"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:textColor="#ffffff"
+        android:background="#999999"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <Button
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="60dp"
             android:layout_gravity="center"
             android:text="메인화면"
             android:textSize="20dp"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/ButtonColor"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
             android:id="@+id/IdPrev"/>
     </LinearLayout>
 

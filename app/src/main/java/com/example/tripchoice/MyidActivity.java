@@ -31,13 +31,12 @@ import static android.content.ContentValues.TAG;
 
 public class MyidActivity extends AppCompatActivity {
 
-    Button IdBtn, IdPrev;
+    Button IdPrev;
     private TextView name_textview, email_textview, id_textview;
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myid);
 
-        IdBtn = (Button) findViewById(R.id.IdBtn);
         IdPrev = (Button) findViewById(R.id.IdPrev);
         name_textview = findViewById(R.id.name);
         id_textview = findViewById(R.id.id);
