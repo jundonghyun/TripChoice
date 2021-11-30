@@ -21,8 +21,6 @@
         <activity android:name=".ScheduleActivity" />
         <activity android:name=".NoticeActivity" />
         <activity android:name=".MyidActivity" />
-        <activity android:name=".RestaurantActivity" />
-        <activity android:name=".ActivityActivity" />
         <activity android:name=".DongHyun.AttractionMainActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />

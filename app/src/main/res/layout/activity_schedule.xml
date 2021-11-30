@@ -30,16 +30,14 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical">
-
         <DatePicker
             android:id="@+id/dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:calendarViewShown="false"
-            android:textColor="#232323"
             android:scaleX="1.178"
-            android:scaleY="1.05" />
+            android:scaleY="1.05"/>
     </LinearLayout>
 
     <LinearLayout
