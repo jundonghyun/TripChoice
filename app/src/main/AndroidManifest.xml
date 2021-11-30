@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TripChoice"
         android:usesCleartextTraffic="true">
+        <activity android:name=".ActMainActivity"/>
+        <activity android:name=".ActRegionSelect"/>
+        <activity android:name=".ResMainActivity"/>
+        <activity android:name=".ResRegionSelect"/>
         <activity android:name=".DongHyun.RecommendAttractionActivity" />
         <activity android:name=".JoinActivity" />
         <activity android:name=".ScheduleActivity" />
