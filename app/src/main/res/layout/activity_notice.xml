@@ -20,6 +20,7 @@
             android:layout_height="50dp"
             android:text="              공지사항"
             android:textStyle="bold"
+            android:textColor="#232323"
             android:textSize="30dp"
             android:background="#ffffff"/>
     </LinearLayout>
@@ -52,6 +53,7 @@
                     android:layout_height="wrap_content"
                     android:text="여행을 초이스 입니다!"
                     android:textSize="30dp"
+                    android:textColor="#232323"
                     android:gravity="center"
                     android:id="@+id/ntv1"/>
             </ScrollView>
@@ -89,6 +91,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="여행을 초이스 입니다!"
+                    android:textColor="#232323"
                     android:textSize="30dp"
                     android:gravity="center"
                     android:id="@+id/ntv2"/>
@@ -127,6 +130,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="여행을 초이스 입니다!"
+                    android:textColor="#232323"
                     android:textSize="30dp"
                     android:gravity="center"
                     android:id="@+id/ntv3"/>

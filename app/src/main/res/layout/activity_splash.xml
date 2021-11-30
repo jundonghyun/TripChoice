@@ -30,6 +30,7 @@
             android:text="Trip Choice"
             android:textStyle="bold"
             android:textSize="50dp"
+            android:textColor="#232323"
             android:gravity="center"/>
     </LinearLayout>
 

@@ -11,6 +11,7 @@
         android:layout_marginTop="30dp"
         android:background="#ffffff"
         android:text="충청/전라 숙박 정보"
+        android:textColor="#232323"
         android:gravity="center"
         android:textSize="30dp"/>
 

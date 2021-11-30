@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:background="#ffffff"
         android:text="부산 여행 코스"
+        android:textColor="#232323"
         android:gravity="center"
         android:textSize="40dp"/>
 

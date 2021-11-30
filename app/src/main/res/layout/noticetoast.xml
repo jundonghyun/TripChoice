@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
+            android:textColor="#232323"
             android:id="@+id/toastTv1"/>
 
         <ImageView

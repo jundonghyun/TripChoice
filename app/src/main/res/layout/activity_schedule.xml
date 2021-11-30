@@ -19,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="51dp"
             android:text="            나만의 일정"
+            android:textColor="#232323"
             android:textStyle="bold"
             android:textSize="30dp"
             android:background="#ffffff"/>
@@ -36,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:calendarViewShown="false"
+            android:textColor="#232323"
             android:scaleX="1.178"
             android:scaleY="1.05" />
     </LinearLayout>
@@ -49,6 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="일정을 입력하세요"
+            android:textColorHint="@color/black"
             android:background="#CCEEFF"
             android:textColor="#000000"
             android:textStyle="bold"

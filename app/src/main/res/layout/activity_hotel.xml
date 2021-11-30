@@ -12,6 +12,7 @@
         android:text="숙박정보"
         android:textStyle="bold"
         android:textSize="30dp"
+        android:textColor="#232323"
         android:gravity="center"/>
 
     <LinearLayout
