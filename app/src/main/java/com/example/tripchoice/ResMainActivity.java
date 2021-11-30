@@ -119,7 +119,7 @@ public class ResMainActivity extends AppCompatActivity {
 
                 xpp.setInput(is,"UTF-8");
 
-                String name = "", addr = "", menu = "", call = "";
+                String name = "", addr = "", menu = "", call = "", desc = "";
                 Bitmap bitmap = null;
                 int eventType = xpp.getEventType();
 
@@ -170,6 +170,10 @@ public class ResMainActivity extends AppCompatActivity {
                                 xpp.next();
                                 addr = xpp.getText();
                                 if(rInfo != null) rInfo.setAddr(addr);
+                            } else if (xpp.getName().equals("ITEMCNTNTS")) {
+                                xpp.next();
+                                desc = xpp.getText();
+                                if(rInfo != null) rInfo.setDesc(desc);
                             }
 
                             break;

@@ -1,11 +1,13 @@
 package com.example.tripchoice;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -65,10 +67,41 @@ public class RcvActAdapter extends RecyclerView.Adapter<RcvActAdapter.ViewHolder
                     int pos = getAdapterPosition();
                     if(pos != RecyclerView.NO_POSITION){
                         data = actInfo.get(pos);
-                        Intent intent = new Intent().addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        intent.setAction(Intent.ACTION_DIAL);
-                        intent.setData(Uri.parse("tel:"+ data.getCall()));
-                        context.startActivity(intent);
+
+                        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                        View view = mInflate.inflate(R.layout.resact_detail, null, false);
+                        builder.setView(view);
+
+                        final Button call;
+                        final TextView name, addr, desc;
+                        final ImageView img;
+
+                        call = view.findViewById(R.id.res_detail_call);
+                        name = view.findViewById(R.id.res_detail_name);
+                        addr = view.findViewById(R.id.res_detail_address);
+                        desc = view.findViewById(R.id.res_detail_menu);
+                        img = view.findViewById(R.id.res_detail_img);
+
+                        name.setText(data.getName());
+                        addr.setText(data.getAddr());
+                        desc.setText(data.getDesc());
+                        img.setImageBitmap(data.getBitmap());
+
+                        final AlertDialog dig = builder.create();
+
+                        String call_number = data.getCall();
+
+                        call.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent().addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                intent.setAction(Intent.ACTION_DIAL);
+                                intent.setData(Uri.parse("tel:"+ call_number));
+                                context.startActivity(intent);
+                            }
+
+                        });
+                        dig.show();
                     }
                 }
             });

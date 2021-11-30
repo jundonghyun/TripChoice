@@ -28,6 +28,34 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+
 public class ActMainActivity extends AppCompatActivity {
     private ArrayList<ActInfo> actList = new ArrayList<>() ;
     private RecyclerView rcv;
@@ -53,7 +81,7 @@ public class ActMainActivity extends AppCompatActivity {
 
         rcv = findViewById(R.id.act_rcv);
 
-        rcvAct = new RcvActAdapter(getApplicationContext(), actList);
+        rcvAct = new RcvActAdapter(this, actList);
 
         while(rcvAct.getItemCount() != getCnt){
             try {
@@ -75,7 +103,7 @@ public class ActMainActivity extends AppCompatActivity {
         try {
             StringBuilder urlBuilder = new StringBuilder(ul + getCnt);
             URL url = new URL(urlBuilder.toString());
-            ActMainActivity.getActList getactlist = new ActMainActivity.getActList();
+            getActList getactlist = new ActMainActivity.getActList();
             getactlist.execute(url);
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -116,7 +144,7 @@ public class ActMainActivity extends AppCompatActivity {
 
                 xpp.setInput(is,"UTF-8");
 
-                String name = "", addr = "", menu = "", call = "";
+                String name = "", addr = "", desc = "", call = "";
                 Bitmap bitmap = null;
                 int eventType = xpp.getEventType();
 
@@ -161,6 +189,10 @@ public class ActMainActivity extends AppCompatActivity {
                                 xpp.next();
                                 addr = xpp.getText();
                                 if(aInfo != null) aInfo.setAddr(addr);
+                            } else if (xpp.getName().equals("ITEMCNTNTS") || xpp.getName().equals("type")){
+                                xpp.next();
+                                desc = xpp.getText();
+                                if(aInfo != null) aInfo.setDesc(desc);
                             }
 
                             break;
