@@ -46,9 +46,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
     private String SelectName = null;
     List<Map<String, Object>> Dlist = new ArrayList<Map<String,Object>>();
 
-    LatLng Seoul = new LatLng(37.54, 126.95);
+    LatLng Seoul = new LatLng(37.54, 127.01);
     LatLng Daegu = new LatLng(35.82, 128.58);
-    LatLng Busan = new LatLng(35.19, 129.05);
+    LatLng Busan = new LatLng(35.12, 129.05);
     LatLng Inchoen = new LatLng(37.46, 126.57);
 
     @Override
@@ -58,7 +58,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
 
         MPrev = (Button) findViewById(R.id.MPrev);
         MPrev.setOnClickListener(new View.OnClickListener() {
@@ -72,10 +71,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         ArrayAdapter<CharSequence> myarray;
         myarray = ArrayAdapter.createFromResource(this,R.array.region_array, android.R.layout.simple_spinner_dropdown_item);
         Spinner spinner = (Spinner)findViewById(R.id.spinner);
-
         spinner.setAdapter(myarray);
-
-
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -92,7 +88,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                 if (task.isSuccessful()) {
                                     for (QueryDocumentSnapshot document : task.getResult()) {
-                                        Log.d("tag", document.getId() + " => " + document.getData());
+                                        //Log.d("tag", document.getId() + " => " + document.getData());
                                         Dlist.add(document.getData());
                                     }
                                 } else {
@@ -146,8 +142,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
         mMap = googleMap;
 
-
-
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
 
             public boolean onMarkerClick(Marker marker) {
@@ -193,7 +187,5 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                 alertDialog.dismiss();
             }
         });
-
-
     }
 }
