@@ -8,13 +8,23 @@ public class attraction {
     Bitmap bitmap;
     double longitude;//128...
     double latitude;//32,..
+    int contentid;
 
-    public attraction(String t, String a, Bitmap b, double lo, double la) {
+    public attraction(String t, String a, Bitmap b, double lo, double la, int content) {
         this.title = t;
         this.address = a;
         this.bitmap = b;
         this.longitude = lo;
         this.latitude = la;
+        this.contentid = content;
+    }
+
+    public int getContentid() {
+        return contentid;
+    }
+
+    public void setContentid(int contentid) {
+        this.contentid = contentid;
     }
 
     public String getTitle() {

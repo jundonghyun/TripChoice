@@ -61,6 +61,7 @@ public class ShowHotelOnMapFragment extends Fragment {
         data = (RecommendAttractionData) bundle.get("data");
 
         double latitude = 0, longitude = 0;
+
         String POIName = "";
 
         if(data != null){
@@ -195,6 +196,7 @@ public class ShowHotelOnMapFragment extends Fragment {
                     String title = "", address = "";
                     Bitmap bitmap = null;
                     double longitude = 0, latitude = 0;
+                    int contentid = 0;
 
                     int eventType = xpp.getEventType();
 
@@ -250,6 +252,13 @@ public class ShowHotelOnMapFragment extends Fragment {
                                     buffer.append(xpp.getText());
                                     buffer.append("\n");
                                 }
+                                else if(xpp.getName().equals("contentid")){
+                                    buffer.append("콘텐츠ID: ");
+                                    xpp.next();
+                                    contentid = Integer.parseInt(xpp.getText());
+                                    buffer.append(xpp.getText());
+                                    buffer.append("\n");
+                                }
                                 break;
                             case XmlPullParser.TEXT:
 
@@ -259,12 +268,13 @@ public class ShowHotelOnMapFragment extends Fragment {
                                 tag = xpp.getName();
 
                                 if(title != "" && address != "" && bitmap != null){
-                                    list.add(new attraction(title, address, bitmap, longitude, latitude));
+                                    list.add(new attraction(title, address, bitmap, longitude, latitude, contentid));
                                     title = "";
                                     address = "";
                                     bitmap = null;
                                     longitude = 0;
                                     latitude = 0;
+                                    contentid = 0;
                                 }
 
                                 if(tag.equals("item")) buffer.append("\n");
