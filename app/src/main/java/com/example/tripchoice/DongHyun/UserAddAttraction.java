@@ -2,6 +2,7 @@ package com.example.tripchoice.DongHyun;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,6 +15,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -87,9 +89,23 @@ public class UserAddAttraction extends AppCompatActivity {
     }
 
     @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_add_attraction);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("관광지추가");
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         SelectArea_spinner = findViewById(R.id.SelectArea_spinner);
         AdministrativeDivision_spinner = findViewById(R.id.AdministrativeDivision_spinner);

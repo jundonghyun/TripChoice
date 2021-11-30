@@ -1,6 +1,7 @@
 package com.example.tripchoice;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -46,6 +47,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("로그인");
 
         id_inputLayout = findViewById(R.id.input_layout_id);
         password_inputLayout = findViewById(R.id.input_layout_password);

@@ -1,12 +1,14 @@
 package com.example.tripchoice.DongHyun;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.tripchoice.R;
@@ -26,9 +28,23 @@ public class RecommendAttractionActivity extends AppCompatActivity {
     private InputStream is;
 
     @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recommend_attraction);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("주변관광지");
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.framelayout, showHotelOnMapFragment).commitAllowingStateLoss();

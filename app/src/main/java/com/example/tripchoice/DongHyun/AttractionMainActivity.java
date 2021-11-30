@@ -47,7 +47,7 @@ public class AttractionMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_attraction_main);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("관광지추천");
+        actionBar.setTitle("주변관광지");
         actionBar.setDisplayHomeAsUpEnabled(true);
 
 

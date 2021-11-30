@@ -5,10 +5,13 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -40,9 +43,24 @@ public class ResMainActivity extends AppCompatActivity {
     private String CN = "https://tour.chungnam.go.kr/_prog/openapi/?func=food&start=0&end=";
 
     @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.restaurant_main);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("맛집정보");
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
         region = intent.getExtras().getString("region");

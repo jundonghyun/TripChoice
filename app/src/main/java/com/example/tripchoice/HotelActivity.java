@@ -3,13 +3,16 @@ package com.example.tripchoice;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,11 +22,24 @@ public class HotelActivity extends AppCompatActivity {
     View dialogView, toastView;
 
     @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     protected void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel);
 
-        HBtn = (Button) findViewById(R.id.HBtn);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("숙박정보");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         Hs = (Button) findViewById(R.id.Hs);
         Hg = (Button) findViewById(R.id.Hg);
         Hd = (Button) findViewById(R.id.Hd);
@@ -118,14 +134,6 @@ public class HotelActivity extends AppCompatActivity {
                 });
                 dlg.setView(dialogView);
                 dlg.show();
-            }
-        });
-
-        HBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
             }
         });
     }

@@ -3,12 +3,14 @@ package com.example.tripchoice;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -33,11 +35,25 @@ public class MyidActivity extends AppCompatActivity {
 
     Button IdPrev;
     private TextView name_textview, email_textview, id_textview;
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myid);
 
-        IdPrev = (Button) findViewById(R.id.IdPrev);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("내 계정");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         name_textview = findViewById(R.id.name);
         id_textview = findViewById(R.id.id);
         email_textview = findViewById(R.id.email);
@@ -57,14 +73,6 @@ public class MyidActivity extends AppCompatActivity {
                     name_textview.setText("이름: " + documentSnapshot.getString("name"));
                     email_textview.setText("이메일: " + documentSnapshot.getString("email"));
                 }
-            }
-        });
-
-        IdPrev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
             }
         });
     }

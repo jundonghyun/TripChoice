@@ -7,52 +7,29 @@
     android:orientation="vertical"
     android:background="#ffffff">
 
-    <TextView
-        android:id="@+id/act_select_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="체험정보"
-        android:textColor="#232323"
-        android:textSize="30dp"
-        android:textStyle="bold"
+
+    <Button
+        android:id="@+id/BS_activity"
+        android:layout_width="145dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="48dp"
+        android:text="부산"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/ButtonColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/CN_activity"
+        android:layout_width="145dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="48dp"
+        android:text="충남"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/ButtonColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-200dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_select_title"
-        app:layout_constraintVertical_bias="0.413">
-
-        <Button
-            android:id="@+id/BS_activity"
-            android:layout_width="145dp"
-            android:layout_height="100dp"
-            android:text="부산"
-            android:textColor="#000000"
-            app:backgroundTint="#FFFFFF"/>
-
-        <Button
-            android:id="@+id/CN_activity"
-            android:layout_width="145dp"
-            android:layout_height="100dp"
-            android:text="충남"
-            android:textColor="#000000"
-            app:backgroundTint="#FFFFFF"/>
-
-
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

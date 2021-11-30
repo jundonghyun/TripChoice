@@ -5,16 +5,6 @@
     android:orientation="vertical"
     android:background="#ffffff">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="숙박정보"
-        android:textStyle="bold"
-        android:textSize="30dp"
-        android:textColor="#232323"
-        android:gravity="center"/>
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,9 +18,9 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginRight="10dp"
-            android:backgroundTint="#ffffff"
+            android:backgroundTint="@color/ButtonColor"
             android:text="서울"
-            android:textColor="#000000"
+            android:textColor="@color/white"
             android:textSize="20dp" />
 
         <Button
@@ -39,8 +29,8 @@
             android:layout_gravity="center"
             android:text="경기"
             android:textSize="20dp"
-            android:backgroundTint="#ffffff"
-            android:textColor="#000000"
+            android:backgroundTint="@color/ButtonColor"
+            android:textColor="@color/white"
             android:id="@+id/Hg"/>
     </LinearLayout>
 
@@ -57,8 +47,8 @@
             android:layout_marginRight="10dp"
             android:text="대구"
             android:textSize="20dp"
-            android:backgroundTint="#ffffff"
-            android:textColor="#000000"
+            android:backgroundTint="@color/ButtonColor"
+            android:textColor="@color/white"
             android:id="@+id/Hd"/>
         <Button
             android:layout_width="145dp"
@@ -66,8 +56,8 @@
             android:layout_gravity="center"
             android:text="부산"
             android:textSize="20dp"
-            android:backgroundTint="#ffffff"
-            android:textColor="#000000"
+            android:backgroundTint="@color/ButtonColor"
+            android:textColor="@color/white"
             android:id="@+id/Hb"/>
     </LinearLayout>
 
@@ -84,8 +74,8 @@
             android:layout_marginRight="10dp"
             android:text="제주"
             android:textSize="20dp"
-            android:backgroundTint="#ffffff"
-            android:textColor="#000000"
+            android:backgroundTint="@color/ButtonColor"
+            android:textColor="@color/white"
             android:id="@+id/Hj"/>
         <Button
             android:layout_width="145dp"
@@ -93,19 +83,9 @@
             android:layout_gravity="center"
             android:text="충청/전라"
             android:textSize="20dp"
-            android:backgroundTint="#ffffff"
-            android:textColor="#000000"
+            android:backgroundTint="@color/ButtonColor"
+            android:textColor="@color/white"
             android:id="@+id/Hc"/>
     </LinearLayout>
-
-    <Button
-        android:layout_width="180dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="70dp"
-        android:layout_gravity="center"
-        android:backgroundTint="#ffffff"
-        android:text="메인화면"
-        android:textColor="#000000"
-        android:id="@+id/HBtn"/>
 
 </LinearLayout>

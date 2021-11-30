@@ -3,10 +3,13 @@ package com.example.tripchoice;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,9 +18,23 @@ public class CourseActivity extends AppCompatActivity {
     View dialogView;
 
     @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     protected void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("여행코스");
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         a = (Button) findViewById(R.id.a);
         b = (Button) findViewById(R.id.b);
@@ -25,7 +42,6 @@ public class CourseActivity extends AppCompatActivity {
         d = (Button) findViewById(R.id.d);
         e = (Button) findViewById(R.id.e);
         f = (Button) findViewById(R.id.f);
-        back = (Button) findViewById(R.id.back);
 
         a.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,14 +130,6 @@ public class CourseActivity extends AppCompatActivity {
                 });
                 dlg.setView(dialogView);
                 dlg.show();
-            }
-        });
-
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
             }
         });
 

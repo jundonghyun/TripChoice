@@ -4,21 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     tools:context=".DongHyun.UserAddAttraction">
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="78dp"
+        android:layout_width="96dp"
         android:layout_height="32dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="22dp"
         android:text="지역선택"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/selectgu"
         app:layout_constraintEnd_toStartOf="@+id/SelectArea_spinner"
-        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/selectgu"
@@ -61,7 +63,7 @@
 
     <EditText
         android:id="@+id/insertAttractionTitle_edittext"
-        android:layout_width="390dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:background="@drawable/memo_border"
@@ -75,8 +77,8 @@
 
     <EditText
         android:id="@+id/insertAttractionContent_edittext"
-        android:layout_width="390dp"
-        android:layout_height="268dp"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
         android:layout_marginTop="48dp"
         android:background="@drawable/memo_border"
         android:gravity="top"
@@ -95,9 +97,9 @@
         android:id="@+id/SelectImage_button"
         android:layout_width="82dp"
         android:layout_height="34dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/ButtonColor"
         android:text="사진선택"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -178,9 +180,9 @@
         android:id="@+id/InsertButton_button"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/ButtonColor"
         android:text="관광지 올리기"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -3,6 +3,7 @@ package com.example.tripchoice;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,6 +27,16 @@ public class NoticeActivity extends AppCompatActivity {
     ViewFlipper vf1;
 
     float initX;
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -45,10 +58,13 @@ public class NoticeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notice);
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("공지사항");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         ntv1 = (TextView) findViewById(R.id.ntv1);
         ntv2 = (TextView) findViewById(R.id.ntv2);
         ntv3 = (TextView) findViewById(R.id.ntv3);
-        NPrev = (Button) findViewById(R.id.NPrev);
         NWrite1 = (Button) findViewById(R.id.NWrite1);
         NWrite2 = (Button) findViewById(R.id.NWrite2);
         NWrite3 = (Button) findViewById(R.id.NWrite3);
@@ -141,14 +157,6 @@ public class NoticeActivity extends AppCompatActivity {
                     }
                 });
                 dlg.show();
-            }
-        });
-
-        NPrev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
             }
         });
     }
