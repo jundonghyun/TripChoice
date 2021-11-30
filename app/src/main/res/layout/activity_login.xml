@@ -21,6 +21,7 @@
                 android:layout_height="wrap_content"
                 android:text="여행을 초이스"
                 android:textSize="40dp"
+                android:textStyle="bold"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="80dp"
                 android:textColor="#000000"/>

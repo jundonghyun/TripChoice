@@ -1,6 +1,7 @@
 package com.example.tripchoice.DongHyun;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,7 +13,9 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -94,32 +97,38 @@ public class ShowRecommendAttractionAdapter extends RecyclerView.Adapter<ShowRec
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    ViewGroup viewGroup = (ViewGroup) v.getParent();
-                    viewGroup.removeView(v);
+                    if(list.size() != 0){
+                        ViewGroup viewGroup = (ViewGroup) v.getParent();
+                        viewGroup.removeView(v);
 
-                    View layoutInflater = LayoutInflater.from(context).inflate(R.layout.detailattraciondialog, viewGroup, false);
+                        View layoutInflater = LayoutInflater.from(context).inflate(R.layout.detailattraciondialog, viewGroup, false);
 
-                    AlertDialog.Builder builder = new AlertDialog.Builder(layoutInflater.getContext());
-                    builder.setView(layoutInflater);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(layoutInflater.getContext());
+                        builder.setView(layoutInflater);
 
-                    AlertDialog alertDialog = builder.create();
-                    alertDialog.show();
+                        AlertDialog alertDialog = builder.create();
+                        alertDialog.show();
 
-                    TextView title = layoutInflater.findViewById(R.id.detailattractiontitle);
-                    TextView overview = layoutInflater.findViewById(R.id.detailattractiondetail);
-                    ImageView imageView = layoutInflater.findViewById(R.id.detailattractionimageview);
-                    Button ok = layoutInflater.findViewById(R.id.detailattractionbutton);
+                        TextView title = layoutInflater.findViewById(R.id.detailattractiontitle);
+                        TextView overview = layoutInflater.findViewById(R.id.detailattractiondetail);
+                        ImageView imageView = layoutInflater.findViewById(R.id.detailattractionimageview);
+                        Button ok = layoutInflater.findViewById(R.id.detailattractionbutton);
 
-                    title.setText(list.get(getAdapterPosition()).title);
-                    overview.setText(list.get(getAdapterPosition()).overview);
-                    imageView.setImageBitmap(list.get(getAdapterPosition()).bitmap);
+                        title.setText(list.get(0).title);
+                        overview.setText(list.get(0).overview);
+                        imageView.setImageBitmap(list.get(0).bitmap);
 
-                    ok.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            alertDialog.dismiss();
-                        }
-                    });
+                        ok.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                alertDialog.dismiss();
+                                list.clear();
+                            }
+                        });
+                    }
+                    else{
+                        Toast.makeText(context, "해당하는 상세정보가 없습니다", Toast.LENGTH_SHORT).show();
+                    }
                 }
             });
         }
@@ -134,6 +143,20 @@ public class ShowRecommendAttractionAdapter extends RecyclerView.Adapter<ShowRec
     }
 
     private class DetailedInform extends AsyncTask<Integer, Integer, ArrayList> {
+        ProgressDialog progressDialog = new ProgressDialog(context);
+        @Override
+        protected void onPostExecute(ArrayList arrayList) {
+            progressDialog.dismiss();
+
+            super.onPostExecute(arrayList);
+        }
+
+        @Override
+        protected void onPreExecute() {
+            progressDialog.show();
+
+            super.onPreExecute();
+        }
 
         @Override
         protected ArrayList doInBackground(Integer... integers) {

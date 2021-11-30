@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.tripchoice.R;
 import com.skt.Tmap.TMapMarkerItem;
@@ -70,16 +71,20 @@ public class ShowHotelOnMapFragment extends Fragment {
             longitude = data.longitude;
         }
 
+        Toast.makeText(container.getContext(), "관광지를 로딩중입니다...", Toast.LENGTH_SHORT).show();
+
+        try {
+            getRecommendAttraction(latitude, longitude, container.getContext());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         view_tmap = (LinearLayout) view.findViewById(R.id.view_tmap);
 
 
         movepos(POIName, latitude, longitude);
 
-        try {
-            getRecommendAttraction(latitude, longitude);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
         sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
         sharedViewModel.setList(list);
 
@@ -105,7 +110,7 @@ public class ShowHotelOnMapFragment extends Fragment {
         mapMarkerItem1.setVisible(TMapMarkerItem.VISIBLE);
     }
 
-    private void getRecommendAttraction(double latitude, double longitude) throws IOException {
+    private void getRecommendAttraction(double latitude, double longitude, Context context) throws IOException {
         StringBuffer buffer = new StringBuffer();
 
 
@@ -293,5 +298,7 @@ public class ShowHotelOnMapFragment extends Fragment {
                 // 리스트에 제목,주소,사진,위도,경도 저장했으므로 recyclerview에 표시하면 끝
             }
         }.start();
+
+        Toast.makeText(context, "관광지 로딩이 완료되었습니다", Toast.LENGTH_SHORT).show();
     }
 }
