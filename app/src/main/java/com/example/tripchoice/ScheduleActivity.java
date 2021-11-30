@@ -29,7 +29,6 @@ public class ScheduleActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-        setTitle("나만의 일정");
 
         dp = (DatePicker) findViewById(R.id.dp);
         Sed = (EditText) findViewById(R.id.Sed);

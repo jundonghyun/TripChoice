@@ -7,6 +7,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:src="@drawable/main"
+            android:background="#ffffff"
+            android:id="@+id/im1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:text="            나만의 일정"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:background="#ffffff"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -15,7 +34,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:calendarViewShown="false"/>
+            android:calendarViewShown="false"
+            android:scaleX="1.178"
+            android:scaleY="1.05" />
     </LinearLayout>
 
     <LinearLayout
@@ -29,7 +50,9 @@
             android:hint="일정을 입력하세요"
             android:background="#CCEEFF"
             android:textColor="#000000"
-            android:lines="12"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:lines="8"
             android:id="@+id/Sed"/>
     </LinearLayout>
 
