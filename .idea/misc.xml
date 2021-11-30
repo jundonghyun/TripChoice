@@ -3,13 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/act_rcv.xml" value="0.19782168186423504" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/act_region_select.xml" value="0.19782168186423504" />
         <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activities_main.xml" value="0.19782168186423504" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_activity.xml" value="0.13425925925925927" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_hotel.xml" value="0.13425925925925927" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_join.xml" value="0.13425925925925927" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_login.xml" value="0.13425925925925927" />
         <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_main.xml" value="0.17" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_map.xml" value="0.13425925925925927" />
         <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_myid.xml" value="0.1527777777777778" />
         <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_notice.xml" value="0.14722222222222223" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_restaurant.xml" value="0.13425925925925927" />
         <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_schedule.xml" value="0.15" />
         <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_splash.xml" value="0.14722222222222223" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/activity_user_add_attraction.xml" value="0.19782168186423504" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/busandialog.xml" value="0.13425925925925927" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/detailattraciondialog.xml" value="0.19782168186423504" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/noticedialog.xml" value="0.13425925925925927" />
         <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/noticetoast.xml" value="0.14722222222222223" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/progressbar.xml" value="0.19782168186423504" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/recommend_attraction_item.xml" value="0.19782168186423504" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/res_rcv.xml" value="0.19782168186423504" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/res_region_select.xml" value="0.19782168186423504" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/restaurant_main.xml" value="0.19782168186423504" />
+        <entry key="..\:/Android-Sdk/TripChoice/app/src/main/res/layout/seouldialog.xml" value="0.13796296296296295" />
         <entry key="..\:/TripChoice/app/src/main/res/layout/activity_main.xml" value="0.13221884498480244" />
         <entry key="..\:/TripChoice/app/src/main/res/layout/mainactiviy.xml" value="0.13272543059777103" />
         <entry key="..\:/Users/82105/AndroidStudioProjects/TripChoice/app/src/main/res/drawable/bottomupnav_activityicon.xml" value="0.2045" />

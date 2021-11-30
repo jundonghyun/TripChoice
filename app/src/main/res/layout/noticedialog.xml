@@ -12,6 +12,7 @@
         android:text="공지사항 작성"
         android:textStyle="bold"
         android:textSize="25dp"
+        android:background="#ffffff"
         android:gravity="center"/>
 
     <EditText
