@@ -61,7 +61,6 @@ public class MyidActivity extends AppCompatActivity {
             }
         });
 
-
         IdPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
